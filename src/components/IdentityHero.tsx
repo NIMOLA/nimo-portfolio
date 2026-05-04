@@ -24,7 +24,7 @@ const GsapBgText = ({ persona }: { persona: any }) => {
     <span
       ref={el}
       aria-hidden="true"
-      className="absolute text-[18vw] font-display font-black tracking-[-0.06em] leading-none"
+      className="absolute text-[28vw] md:text-[18vw] font-display font-black tracking-[-0.06em] leading-none"
       style={{ color: persona.accent }}
     >
       {persona.role_text_bg}
@@ -51,10 +51,10 @@ const GsapTextContent = ({ persona }: { persona: any }) => {
         className="accent-line mb-5 h-1 w-12 rounded-full"
         style={{ background: `linear-gradient(90deg, ${persona.accent}, ${persona.accent}60)` }}
       />
-      <h1 className="text-animate text-5xl md:text-7xl font-display font-black tracking-tight text-black">
+      <h1 className="text-animate text-4xl sm:text-5xl md:text-7xl font-display font-black tracking-tight text-black">
         {persona.title}
       </h1>
-      <p className="text-animate text-xl md:text-3xl text-gray-500 font-sans mt-3">
+      <p className="text-animate text-lg sm:text-xl md:text-3xl text-gray-500 font-sans mt-3">
         {persona.subtitle}
       </p>
     </div>
@@ -173,9 +173,8 @@ export default function IdentityHero() {
             >
               {/* Portrait — full-height, overflows above header */}
               <div 
-                className="relative w-full"
+                className="relative w-full h-[65vh] md:h-[90vh]"
                 style={{
-                  height: "90vh",
                   WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                 }}
@@ -203,18 +202,18 @@ export default function IdentityHero() {
       <div className="absolute bottom-0 left-0 right-0 z-50 pointer-events-none pb-[env(safe-area-inset-bottom)]">
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6 px-8 md:px-12 pb-10">
           {/* CTAs */}
-          <div className="flex items-center gap-4 pointer-events-auto">
-            <a href="#experience" className="premium-button-primary flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-stone-900 outline-none">
+          <div className="flex flex-col md:flex-row items-center gap-4 pointer-events-auto w-full md:w-auto">
+            <a href="#experience" className="premium-button-primary w-full md:w-auto justify-center flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-stone-900 outline-none">
               View Case Studies
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
-            <a href="#contact" className="premium-button-secondary focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-stone-900 outline-none">
+            <a href="#contact" className="premium-button-secondary w-full md:w-auto justify-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-stone-900 outline-none">
               About Me
             </a>
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center gap-6 pointer-events-auto">
+          <div className="flex items-center gap-6 pointer-events-auto mt-4 md:mt-0 w-full md:w-auto justify-between md:justify-end">
             <nav className="flex items-center gap-3" aria-label="Identity rotation">
               <button
                 onClick={() => rotate(-1)}

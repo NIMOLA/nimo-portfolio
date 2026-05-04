@@ -25,7 +25,7 @@ const tagVariants = {
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="py-28 md:py-36 px-8 overflow-hidden" style={{ background: "#ffffff" }}>
+    <section id="capabilities" className="py-16 md:py-36 px-6 md:px-8 overflow-hidden" style={{ background: "#ffffff" }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-start gap-16 md:gap-24">
           {/* Left column — heading */}
@@ -37,7 +37,7 @@ export default function Capabilities() {
           >
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-gray-500">What I Do</span>
             <div className="accent-line mt-4 mb-5" />
-            <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight text-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-black">
               Capabilities<span style={{ color: "#dc2626" }}>.</span>
             </h2>
             <p className="text-gray-600 font-sans text-lg mt-6 leading-relaxed">

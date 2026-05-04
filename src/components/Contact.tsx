@@ -32,7 +32,7 @@ const SOCIALS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-28 md:py-36 px-8 overflow-hidden" style={{ background: "#000000" }}>
+    <section id="contact" className="relative py-16 md:py-36 px-6 md:px-8 overflow-hidden" style={{ background: "#000000" }}>
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -64,7 +64,7 @@ export default function Contact() {
             The End Game
           </span>
           <div className="accent-line mt-4 mb-6" />
-          <h2 className="text-5xl md:text-7xl font-display font-black leading-[0.92] tracking-tighter text-white">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-black leading-[0.92] tracking-tighter text-white">
             I Automate{" "}
             <span className="block" style={{ color: "#dc2626" }}>Growth.</span>
           </h2>
@@ -129,6 +129,7 @@ export default function Contact() {
               href="https://ndsagency.com.ng"
               target="_blank"
               rel="noopener noreferrer"
+              className="mt-6 md:mt-10 px-8 py-5 rounded-full inline-flex items-center justify-center gap-3 text-white font-bold text-lg transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#dc2626] outline-none"
               style={{
                 background: "#dc2626",
                 boxShadow: "0 4px 20px rgba(220,38,38,0.3)",

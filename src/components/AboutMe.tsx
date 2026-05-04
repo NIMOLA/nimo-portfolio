@@ -27,7 +27,7 @@ export default function AboutMe() {
     <section id="about" className="bg-white overflow-hidden relative">
 
       {/* ── BIO BLOCK ── */}
-      <div className="border-b border-gray-100 py-20 px-8">
+      <div className="border-b border-gray-100 py-12 md:py-20 px-6 md:px-8">
         <motion.div
           className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-20"
           initial={{ opacity: 0, y: 24 }}
@@ -38,7 +38,7 @@ export default function AboutMe() {
           {/* Name block */}
           <div className="flex-shrink-0">
             <p className="text-xs font-mono uppercase tracking-[0.2em] text-gray-500 mb-3">About Me</p>
-            <h2 className="text-5xl md:text-7xl font-display font-black tracking-tight text-black leading-none">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-black tracking-tight text-black leading-none">
               Izevizua<br />
               <span style={{ color: "#dc2626" }}>Osas.</span>
             </h2>
@@ -65,7 +65,7 @@ export default function AboutMe() {
       </div>
 
       {/* ── DYNAMIC STORY BLOCK ── */}
-      <div className="py-28 md:py-36 px-8 relative">
+      <div className="py-16 md:py-36 px-6 md:px-8 relative">
         {/* Decorative background element */}
         <div 
           className="absolute top-0 right-0 w-[800px] h-[800px] pointer-events-none opacity-40 mix-blend-multiply transition-colors duration-700"
@@ -82,7 +82,7 @@ export default function AboutMe() {
             <div className="sticky top-32">
               <span className="story-animate text-xs font-mono uppercase tracking-[0.2em] text-gray-500">{story.tagline}</span>
               <div className="story-animate accent-line mt-4 mb-5" />
-              <h3 className="story-animate text-4xl md:text-6xl font-display font-black leading-[1.1] tracking-tight text-black">
+              <h3 className="story-animate text-3xl sm:text-4xl md:text-6xl font-display font-black leading-[1.1] tracking-tight text-black">
                 {story.headline}
                 <br />
                 <span className="text-gray-400">{story.headlineHighlight}</span>
@@ -108,7 +108,7 @@ export default function AboutMe() {
                   key={i}
                   className="story-animate flex flex-col gap-2"
                 >
-                  <span className="text-4xl md:text-5xl font-display font-black transition-colors duration-700" style={{ color: persona.accent }}>
+                  <span className="text-3xl md:text-5xl font-display font-black transition-colors duration-700" style={{ color: persona.accent }}>
                     {stat.value}
                   </span>
                   <span className="text-xs font-mono uppercase tracking-wider text-gray-500">

@@ -46,10 +46,10 @@ const cardVariants = {
 
 export default function SystemsBuilt() {
   return (
-    <section id="experience" className="py-28 md:py-36 px-8" style={{ background: "#f9fafb" }}>
+    <section id="experience" className="py-16 md:py-36 px-6 md:px-8" style={{ background: "#f9fafb" }}>
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function SystemsBuilt() {
           >
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-gray-500">Case History</span>
             <div className="accent-line mt-4 mb-5" />
-            <h2 className="text-4xl md:text-6xl font-display font-black tracking-tight text-black">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-black tracking-tight text-black">
               Systems Built<span style={{ color: "#dc2626" }}>.</span>
             </h2>
           </motion.div>
