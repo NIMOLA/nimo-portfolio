@@ -42,7 +42,7 @@ export default function AboutMe() {
               Izevizua<br />
               <span style={{ color: "#dc2626" }}>Osas.</span>
             </h2>
-            <p className="text-base font-mono text-gray-500 mt-4 uppercase tracking-widest">Known as Nimo</p>
+            <p className="text-base font-mono text-gray-500 mt-4 uppercase tracking-widest">Known as Mr. Niomla</p>
             <div className="flex items-center gap-2 mt-4 text-gray-400">
               <MapPin className="w-4 h-4" style={{ color: "#dc2626" }} />
               <span className="text-sm font-sans">Lagos, Nigeria</span>
