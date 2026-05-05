@@ -73,6 +73,12 @@ export default function IdentityHero() {
   }, []);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      (window as any).setPersonaIndex = setIndex;
+    }
+  }, [setIndex]);
+
+  useEffect(() => {
     if (isHovered) return;
     const interval = setInterval(() => rotate(1), 5000);
     return () => clearInterval(interval);
@@ -82,7 +88,7 @@ export default function IdentityHero() {
 
   return (
     <section
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ background: "#ffffff" }}
@@ -134,7 +140,7 @@ export default function IdentityHero() {
       </div>
 
       {/* Layer 3: Main Gear Content */}
-      <div className="relative z-30 w-full flex flex-col items-center justify-end pb-36 md:pb-40" style={{ minHeight: "100vh" }}>
+      <div className="relative z-30 w-full flex-1 flex flex-col items-center justify-center pt-32 pb-12">
         <div className="relative w-full flex items-center justify-center overflow-visible">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -173,7 +179,7 @@ export default function IdentityHero() {
             >
               {/* Portrait — full-height, overflows above header */}
               <div 
-                className="relative w-full h-[65vh] md:h-[90vh]"
+                className="relative w-full h-[55vh] md:h-[90vh]"
                 style={{
                   WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
@@ -190,7 +196,7 @@ export default function IdentityHero() {
               </div>
 
               {/* Text Content — sits directly below the fade */}
-              <div className="w-full -mt-12 relative z-40 flex flex-col items-center text-center">
+              <div className="w-full -mt-8 md:-mt-12 relative z-40 flex flex-col items-center text-center px-4">
                 <GsapTextContent persona={currentPersona} />
               </div>
             </motion.div>
@@ -199,7 +205,7 @@ export default function IdentityHero() {
       </div>
 
       {/* Layer 4: Persistent Bottom Bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-50 pointer-events-none pb-[env(safe-area-inset-bottom)]">
+      <div className="relative z-50 pointer-events-none pb-[env(safe-area-inset-bottom)] w-full mt-auto">
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6 px-8 md:px-12 pb-10">
           {/* CTAs */}
           <div className="flex flex-col md:flex-row items-center gap-4 pointer-events-auto w-full md:w-auto">
